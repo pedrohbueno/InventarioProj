@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("RA:  | Nome: ");
+        System.out.println("RA: 12530354 | Nome: Pedro Henrique Bueno Dos Santos");
         System.out.println("Disciplina: POO | Aula 5 - Inventário");
         System.out.println();
 

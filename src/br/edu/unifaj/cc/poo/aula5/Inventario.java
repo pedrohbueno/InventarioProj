@@ -38,8 +38,12 @@ public class Inventario implements Relatorio {
         this.funcionarios = funcionarios;
     }
 
-    public void adicionarItem(Patrimonio p)        { itens.add(p); }
-    public void adicionarFuncionario(Funcionario f){ funcionarios.add(f); }
+    public void adicionarItem(Patrimonio p){
+        itens.add(p);
+    }
+    public void adicionarFuncionario(Funcionario f){
+        funcionarios.add(f);
+    }
 
     @Override
     public void gerarRelatorio() {

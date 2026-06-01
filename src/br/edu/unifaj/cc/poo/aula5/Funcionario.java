@@ -39,7 +39,9 @@ public class Funcionario extends Pessoa {
         this.clientes = clientes;
     }
 
-    public void adicionarCliente(Cliente c) { clientes.add(c); }
+    public void adicionarCliente(Cliente c) {
+        clientes.add(c);
+    }
 
     @Override
     public void gerarRelatorio() {

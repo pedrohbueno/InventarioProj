@@ -41,5 +41,7 @@ public abstract class Patrimonio implements Relatorio {
         this.funcionarios = funcionarios;
     }
 
-    public void alocarFuncionario(Funcionario f) { funcionarios.add(f); }
+    public void alocarFuncionario(Funcionario f) {
+        funcionarios.add(f);
+    }
 }
