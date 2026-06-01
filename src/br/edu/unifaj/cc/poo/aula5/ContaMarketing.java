@@ -1,37 +1,60 @@
 package br.edu.unifaj.cc.poo.aula5;
 
-public class ContaMarketing implements Relatorio{
-    private String numero;
-    private String dataInicio;
-    private String dataFim;
+public class ContaMarketing implements Relatorio {
+    private String id;
+    private String plataforma;
     private Cliente cliente;
     private Funcionario funcionario;
 
-    public Contrato(String numero, String dataInicio, String dataFim,
-                    Cliente cliente, Funcionario funcionario) {
-        this.numero = numero;
-        this.dataInicio = dataInicio;
-        this.dataFim = dataFim;
-        this.cliente = cliente;
+    public ContaMarketing() {
+    }
+
+    public ContaMarketing(String id, String plataforma,
+                          Cliente cliente, Funcionario funcionario) {
+        this.id          = id;
+        this.plataforma  = plataforma;
+        this.cliente     = cliente;
         this.funcionario = funcionario;
     }
 
-    public String getNumero() { return numero; }
-    public Cliente getCliente() { return cliente; }
-    public Funcionario getFuncionario() { return funcionario; }
+    public String getId() {
+        return id;
+    }
 
-    @Override
-    public String gerarRelatorio() {
-        return "=== CONTRATO ===\n"
-                + "  Número      : " + numero + "\n"
-                + "  Data Início : " + dataInicio + "\n"
-                + "  Data Fim    : " + dataFim + "\n"
-                + "  Funcionário : " + funcionario.getNome() + " (" + funcionario.getMatricula() + ")\n"
-                + "  Cliente     : " + cliente.getNome() + " (" + cliente.getCpf() + ")";
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getPlataforma() {
+        return plataforma;
+    }
+
+    public void setPlataforma(String plataforma) {
+        this.plataforma = plataforma;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public Funcionario getFuncionario() {
+        return funcionario;
+    }
+
+    public void setFuncionario(Funcionario funcionario) {
+        this.funcionario = funcionario;
     }
 
     @Override
-    public void exibirRelatorio() {
-        System.out.println(gerarRelatorio());
+    public void gerarRelatorio() {
+        System.out.println("--- Conta Maketing ---");
+        System.out.println("ID: "          + id);
+        System.out.println("Plataforma: "  + plataforma);
+        System.out.println("Funcionario: " + funcionario.getNome());
+        System.out.println("Cliente: "     + cliente.getNome());
     }
 }

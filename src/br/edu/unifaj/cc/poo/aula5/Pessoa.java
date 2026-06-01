@@ -4,18 +4,27 @@ public abstract class Pessoa implements Relatorio {
     protected int id;
     protected String nome;
 
+    public Pessoa() {
+    }
+
     public Pessoa(int id, String nome) {
-        this.id = id;
+        this.id   = id;
         this.nome = nome;
     }
 
-    public int getId() { return id; }
-    public String getNome() { return nome; }
+    public int getId() {
+        return id;
+    }
 
-    public abstract void exibirDados();
+    public void setId(int id) {
+        this.id = id;
+    }
 
-    @Override
-    public void exibirRelatorio() {
-       gerarRelatorio();
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 }
